@@ -1,6 +1,6 @@
 Ali::Application.routes.draw do
   root  'static_pages#home'
-  match '/gallery',    to: 'static_pages#gallery',    via: 'get'
+  match '/gallery', to: 'static_pages#gallery',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.

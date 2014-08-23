@@ -63,6 +63,27 @@ p {
   text-decoration: none;
 }
 
+/* Nav */
+
+.navbar-default{
+  background-color: rgba(0, 0, 0, 0);
+  border-top:3px solid #a8dbc8;
+  border-left:0px;
+  border-right:0px;
+  border-bottom:0px;
+  
+}
+
+.navbar-nav li{
+    display:inline;
+    padding-left: 145px;
+    font-size: 20px;
+    }
+
+.dropdown li {
+    font-size: 12px;
+    }
+
 
 /* footer */
 
