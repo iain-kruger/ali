@@ -55,6 +55,8 @@ p {
     display: block;
     margin-left: auto;
     margin-right: auto; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
     width: 220px;
     }
 
@@ -88,6 +90,7 @@ p {
  .heart {
   display: block;
   margin-top: 0px;
+  margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto; 
     width: 350px;
@@ -128,28 +131,25 @@ footer ul li {
 }
 
 .social {
-margin-top: 10px;
+margin-top: 20px;
   background-color: #a8dbc8;
   height: 65px;
 }
-.social-inner{
+
+
+.social ul {
+  padding-left:0px;
+  padding-top:0px;
   
 }
-.social IMG {
-padding-left: 0px;
-margin-left: 0px;
-float: left;
-width:40px;
 
+.social IMG {
+  height: 50px;
+  padding-bottom: 20px;
 }
-.social ul {
-  padding-left:430px;
-  padding-top:0px;
-  margin-top:0px;
-}
-.social li {
-    border-diameter: 50;
-    border-width: 5px;
-    border-color: #eaeaea;
-    padding-left: 20px; 
+
+.social a {
+margin-top:20px;
+padding-top:20;
+  height: 50px;
 }
