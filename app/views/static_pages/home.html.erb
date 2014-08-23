@@ -1,12 +1,48 @@
-<div class="center hero-unit">
-  <h1>Welcome to the Sample App</h1>
+<div Class="container">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+  </ol>
 
-  <h2>
-    This is the home page for the
-    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-    sample application.
-  </h2>
-
-  <%= link_to "Sign up now!", '#', class: "btn btn-large btn-primary" %>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <%=image_tag("carousel/Carousel 1.jpg", alt: "Ali Bodill Photography") %>
+      <div class="carousel-caption">
+      </div>
+    </div>
+    <div class="item">
+      <%=image_tag("carousel/Carousel 2.jpg", alt: "Ali Bodill Photography") %>
+      <div class="carousel-caption">
+      </div>
+    </div>
+    <div class="item">
+      <%=image_tag("carousel/Carousel 3.jpg", alt: "Ali Bodill Photography") %>
+      <div class="carousel-caption">
+        </div>
+  </div>
+  <div class="item">
+      <%=image_tag("carousel/Carousel 4.jpg", alt: "Ali Bodill Photography") %>
+      <div class="carousel-caption">
+        </div>
+        <!-- Controls -->
+  
 </div>
+  </div>
+</div>
+  <div Class="social">
+    <div Class="social-inner">
+    <ul Class="nav navbar-nav">
+        <li><%= link_to image_tag("silver round social media icon facebook.png", alt: "Facebook"), '/' %></li>
+        <li><%= link_to image_tag("twitter 2 silver round social media icon .png", alt: "Twitter"), '/' %></li>
+        <li><%= link_to image_tag("pinterest silver round social media icon .png", alt: "Pintrist"), '/' %></li>
+        
+      </ul>
+      </div>
+    </div>
+  </div>
 

@@ -71,6 +71,7 @@ p {
   border-left:0px;
   border-right:0px;
   border-bottom:0px;
+  margin-bottom: -18px;
   
 }
 
@@ -83,6 +84,16 @@ p {
 .dropdown li {
     font-size: 12px;
     }
+
+ .heart {
+  display: block;
+  margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto; 
+    width: 350px;
+    padding-top: 0px
+    
+}
 
 
 /* footer */
@@ -114,4 +125,31 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 10px;
+}
+
+.social {
+margin-top: 10px;
+  background-color: #a8dbc8;
+  height: 65px;
+}
+.social-inner{
+  
+}
+.social IMG {
+padding-left: 0px;
+margin-left: 0px;
+float: left;
+width:40px;
+
+}
+.social ul {
+  padding-left:430px;
+  padding-top:0px;
+  margin-top:0px;
+}
+.social li {
+    border-diameter: 50;
+    border-width: 5px;
+    border-color: #eaeaea;
+    padding-left: 20px; 
 }
