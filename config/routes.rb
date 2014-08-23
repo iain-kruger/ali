@@ -1,8 +1,8 @@
 Ali::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/about"
-  get "static_pages/contact"
-  get "static_pages/gallery"
+  root  'static_pages#home'
+  match '/gallery',    to: 'static_pages#gellery',    via: 'get'
+  match '/about',   to: 'static_pages#about',   via: 'get'
+  match '/contact', to: 'static_pages#contact', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
