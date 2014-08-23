@@ -6,10 +6,6 @@ html {
   overflow-y: scroll;
 }
 
-body {
-  padding-top: 60px;
-}
-
 section {
   overflow: auto;
 }
@@ -55,22 +51,18 @@ p {
 
 /* header */
 
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  line-height: 1;
-}
+.Logo IMG {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    width: 220px;
+    }
 
 #logo:hover {
   color: #fff;
   text-decoration: none;
 }
+
 
 /* footer */
 
