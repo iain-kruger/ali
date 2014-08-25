@@ -11,4 +11,6 @@ class StaticPagesController < ApplicationController
   def gallery
   end
 
+  def shoot
+  end
 end

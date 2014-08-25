@@ -2,6 +2,11 @@
 
 /* universal */
 
+@font-face {
+    font-family: 'CaviarDreams'; 
+    src: url('/assets/fonts/CaviarDreams.ttf');
+}
+
 html {
   overflow-y: scroll;
 }
@@ -42,6 +47,7 @@ h2 {
   text-align: center;
   font-weight: normal;
   color: #999;
+  font-family: 'CaviarDreams';
 }
 
 p {
@@ -69,31 +75,20 @@ p {
   border-top:3px solid #a8dbc8;
   border-left:0px;
   border-right:0px;
-  border-bottom:0px;
-  margin-bottom: -18px;
-  
+  border-bottom:1px solid grey;
+  margin-bottom: 10px;
+  border-radius: 0px;
+    
+
 }
 
 .navbar-nav li{
     display:inline;
     padding-left: 145px;
     font-size: 20px;
+    font-family: 'CaviarDreams';
     }
 
-.dropdown li {
-    font-size: 12px;
-    }
-
- .heart {
-  display: block;
-  margin-top: 0px;
-  margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto; 
-    width: 27em;
-    padding-top: 0px
-    
-}
 
 
 /* footer */
@@ -159,4 +154,30 @@ border-color: white;
  margin-bottom:5px;
  }
 
+ .social-first{
+ padding-left:0px;
+ }
 
+  .social-first a{
+ padding-left:0px;
+ }
+
+  .social-first IMG{
+ padding-left:0px;
+ }
+
+ /* dropdown */
+
+ .dropdown-menu{
+ width: 5px;
+ margin-left:145px;
+ }
+
+ .dropdown-menu li{
+ font-size:0px;
+ 
+ }
+ .dropdown-menu a{
+ font-size:12px;
+ 
+ }
