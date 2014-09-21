@@ -1,0 +1,8 @@
+<h1><%= @shoot.name %></h1>
+
+<div class="photo">
+  <% @Photos.each do |photo| %>
+ <%= image_tag("photos/#{photo.name}", alt: "Facebook")%>
+
+<% end %>
+</div>
