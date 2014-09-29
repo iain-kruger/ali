@@ -1,0 +1,11 @@
+<div class="container">
+	<div>
+<%= render 'shared/photo_form' %>
+	</div>
+    <% if @shoot.photos.any? %>
+      <h3>Photos (<%= @shoot.photos.count %>)</h3>
+      <ol class="microposts">
+        <%= render @photos %>
+      </ol>
+    <% end %>
+  </div>

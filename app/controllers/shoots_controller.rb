@@ -4,11 +4,14 @@ class ShootsController < ApplicationController
   end
 
   def create
-  	@shoots = Shoot.new(params[:id]) 
-    @shoots.save
+  	@shoot = Shoot.new(shoot_params) 
+    @shoot.save
+    redirect_to '/index'
   end
 
   def destroy
+    shoot.find(params[:id]).destroy
+    redirect_to '/index'
   end
 
   def edit
@@ -33,11 +36,18 @@ def photos
 	
 end
 
+def showadmin
+  @name=(params[:shootName])
+  @shoot=Shoot.find_by(name: @name)
+  @photos = @shoot.photos
+
+  @photoform = @shoot.photos.build
+end
+
   private
 
     def shoot_params
-      params.require(:shoot).permit(:catagory,:name,:discription, :thumbnail, 
-                                   )
+      params.require(:shoot).permit(:catagory, :name, :discription, :thumbnail)
     end
 
 end
