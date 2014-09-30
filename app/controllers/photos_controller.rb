@@ -1,4 +1,5 @@
 class PhotosController < ApplicationController
+<<<<<<< HEAD
 def new
 end
   
@@ -10,10 +11,38 @@ end
 
 def edit
 end
+=======
+
+  def new
+    #create a photo object to be rendered in the form
+    @photo = Shoot.find(params[:id]).photos.new
+  end
+
+  def create
+    #try create the new photo record
+    @photo = Shoot.find(params[:id]).photos.create(photo_params)
+    #if it gets persisted
+    if @photos.persisted?
+      flash[:success] = "You have successfully created the photo"
+      redirect_to photo_path @photos
+    else
+      #render the new template with errors showing if any
+      render 'new'
+    end
+  end
+
+  def edit
+    @photo = photo.find(params[:id])
+  end
+>>>>>>> af12f947587ddcb1bd419dac4f66d52bb990ec36
 
   def destroy
   end
-def photo_params
-      params.require(:photo).permit(:name)
-    end
+
+
+  private #this should be protected as this is your security generally.
+
+  def photo_params
+    params.require(:photo).permit(:name)
+  end
 end
