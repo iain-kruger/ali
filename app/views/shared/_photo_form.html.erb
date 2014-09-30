@@ -1,7 +1,6 @@
 <%= form_for(@photoform) do |f| %>
   <div class="field">
     <%= f.text_field :name, placeholder: "photo name" %>
-    <%= f.text_field :id %>
   </div>
   <%= f.submit "Post", class: "btn btn-large btn-primary" %>
 <% end %>

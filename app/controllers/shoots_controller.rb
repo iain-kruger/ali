@@ -30,15 +30,14 @@ def index
   end
 
 def photos
-  @name=(params[:shootName])
-  @shoot=Shoot.find_by(name: @name)
+  @shoot = Shoot.find(params[:shoot_id])
   @Photos = @shoot.photos
 	
 end
 
 def showadmin
-  @name=(params[:shootName])
-  @shoot=Shoot.find_by(name: @name)
+  
+ @shoot = Shoot.find(params[:id])
   @photos = @shoot.photos
 
   @photoform = @shoot.photos.build
