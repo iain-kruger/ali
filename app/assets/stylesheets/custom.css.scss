@@ -230,3 +230,99 @@ input {
 .adminphoto IMG {
   width: 100px
 }
+
+
+/*shoot edit and index */
+
+.photo-index{
+  float: right;
+  width: 50%
+
+}
+.photo-list{
+  position: relative;
+  width:35em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+ .index-photo{
+      
+    position: relative;
+    border: 2px solid lightgrey;
+    width: 50%;
+    display: block;
+   margin-right: auto;
+   margin-left:auto;
+    
+    IMG{
+    display: block;
+    width: 12em;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 1em;
+    }
+  }
+  .index-control {
+    width: 12em;
+     display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 1em;
+    a {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1em;
+    }
+  }
+
+  .index-add-photo {
+   width: 12em;
+     display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 1em;
+    margin-bottom: 1em;
+    a {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1em;
+    }
+  }
+
+.shoot-view{
+  float: left;
+  width: 50% ;
+
+}
+
+.shoot-thumbnail{
+  position: relative;
+  width: 30em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  IMG {
+    position:relative;
+    width: 25em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+}
+.shoot-controls {
+    width: 12em;
+     display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 1em;
+    a {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1em;
+    }
+  }

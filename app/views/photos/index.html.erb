@@ -1,0 +1,14 @@
+<h1>Photo Index</h1>
+
+<div class="container">
+<div class="row">
+  <% @photos.each do |photo| %>
+   <div class="col-xs-12 col-md-4">
+  	<span class="center gallery"><h2><%= photo.name%></h2></span>
+    </a>
+    <%= link_to "delete", url: edit_shoot_photo_path(shoot_id: @shoot.id, id:photo.id) %> |
+     <%= link_to "delete", shoot_photo_path(shoot_id: @shoot.id, id:photo.id),  :confirm => 'Are you sure?', :method => :delete %>
+</div>
+  <% end %>
+</ul>
+</div>

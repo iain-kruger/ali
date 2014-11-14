@@ -13,4 +13,5 @@
 
 class Shoot < ActiveRecord::Base
 	has_many :photos, dependent: :destroy
+	mount_uploader :thumbnail, ThuumbnailUploader
 end

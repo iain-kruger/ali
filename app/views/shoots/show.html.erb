@@ -1,13 +1,44 @@
-<h1><%= @catagory.titleize %></h1>
+
 
 <div class="container">
-<div class="row">
-  <% @shoots.each do |shoot| %>
-   <div class="col-xs-12 col-md-4">
-  	<span class="center gallery"><h2><%= shoot.name %></h2></span>
-    <a href="/shoots/<%=shoot.id%>/photos/" class="thumbnail">
-      <%= image_tag("GalleryButtons/NewBorn.png", alt: "")%>
-    </a>
+
+	<div class="shoot-view">
+    <p><h1><%= @shoot.name %></h1></p>
+      <div class="shoot-thumbnail">
+        <%= image_tag @shoot.thumbnail_url.to_s %>
+      </div>
+        <p class="center"><%= @shoot.discription %></p>
+          <div class="shoot-controls">
+             
+                <%= link_to "edit", edit_shoot_path(@shoot), class: "btn btn-large btn-primary" %>
+              
+             
+               <%= link_to "remove", @shoot, :confirm => 'Are you sure you want to delete this shoot? All its photos will be deleted with it!', class: "btn btn-large btn-danger" , :method => :delete %>
+
+               <%= link_to "Back", shoots_path, class: "btn btn-large btn-primary" %>
+            
+           </div>
+  </div>
+
+<div class="photo-index"> 
+
+  <p><h2>Photo Index:</h2></p>
+  <div class="index-add-photo"> 
+      <%= link_to "Add Photos", new_shoot_photo_path(@shoot.id), class: "btn btn-large btn-primary" %>
+  </div>
+  
+    <div class="photo-list row">
+        <% @photos.each do |photo| %>
+          <div class="index-photo col-md-6">
+            <%= image_tag photo.photo_url.to_s %>
+              <div class="index-control">
+                <%= link_to "delete", shoot_photo_path(shoot_id: @shoot.id, id:photo.id), class: "btn btn-danger", :method => :delete %>
+              </div>
+          </div>
+            <% end %>
+          
+    </div>
+
 </div>
-  <% end %>
 </div>
+

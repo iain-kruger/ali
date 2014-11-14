@@ -1,4 +1,6 @@
 class ShootsController < ApplicationController
+  http_basic_authenticate_with :name => "ali", :password => "adminali", only: :index
+
   def new
   	@shoot = Shoot.new
   end
@@ -6,23 +8,31 @@ class ShootsController < ApplicationController
   def create
   	@shoot = Shoot.new(shoot_params) 
     @shoot.save
-    redirect_to '/index'
+    redirect_to :action => 'index'
   end
 
   def destroy
-    shoot.find(params[:id]).destroy
-    redirect_to '/index'
+    Shoot.find(params[:id]).destroy
+    redirect_to :action => 'index'
   end
 
   def edit
+    @shoot = Shoot.find(params[:id])
+  end
+
+   def update
+    @shoot=Shoot.find(params[:id])
+    if @shoot.update_attributes(shoot_params)
+      flash[:success] = "Profile updated"
+      redirect_to :action => 'index'
+    else
+      render 'edit'
+    end
   end
 
   def show
-    @catagory= (params[:catagory])
-    @shoots = Shoot.where(catagory: @catagory) 
-    if @catagory == "newborn"
-      @catagory = "New Born"
-    end
+    @shoot = Shoot.find(params[:id])
+    @photos = @shoot.photos
   end
 
 def index
@@ -35,13 +45,14 @@ def photos
 	
 end
 
-def showadmin
-  
- @shoot = Shoot.find(params[:id])
-  @photos = @shoot.photos
+  def gallery
+    @catagory= (params[:catagory])
+    @shoots = Shoot.where(catagory: @catagory) 
+    if @catagory == "newborn"
+      @catagory = "New Born"
+    end
+  end
 
-  @photoform = @shoot.photos.build
-end
 
   private
 

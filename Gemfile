@@ -6,6 +6,8 @@ gem 'rails', '4.0.8'
 gem 'bootstrap-sass'
 gem 'sprockets', '2.11.0'
 gem 'annotate'
+gem 'carrierwave'
+
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'

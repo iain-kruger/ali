@@ -12,4 +12,5 @@
 class Photo < ActiveRecord::Base
 	belongs_to :shoot
   validates_presence_of :shoot
+  mount_uploader :photo, PhotosUploader
 end

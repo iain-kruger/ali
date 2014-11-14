@@ -1,0 +1,27 @@
+
+<h1> Edit </h1>
+
+<div class="row">
+  <div class="col-xs-12 col-md-6">
+    <%= form_for (@shoot) do |f| %>
+    <%= render 'shared/error_messages' %>
+<p>
+      <%= f.label :catagory %>
+      <%= f.text_field :catagory %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :discription %>
+      <%= f.text_field :discription %>
+      </p>
+
+      <p>
+      <%= f.label :thumbnail %>
+      <%= f.file_field :thumbnail %>
+</p>
+
+    <p>  <%= f.submit "Update #{@shoot.name}", class: "btn btn-large btn-primary" %></p>
+    <% end %>
+  </div>
+</div>
