@@ -32,7 +32,9 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
-
+p {
+  font-family: 'CaviarDreams';
+}
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
@@ -326,3 +328,11 @@ input {
       margin-bottom: 1em;
     }
   }
+
+.about-text{
+  width:50em;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+
+}
