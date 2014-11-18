@@ -1,14 +1,14 @@
 Ali::Application.routes.draw do
    root  'static_pages#home'
    match '/shoots/:shoot_id/:shoot_name/photos/gallery', to: 'photos#show', via: 'get'
-   
+   resources :static_pages
    resources :shoots do
     resources :photos
   end
 
   match '/gallery', to: 'static_pages#gallery',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
-  match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/contact', to: 'static_pages#new', via: 'get'
  
 match '/shoots/go/:catagory', to: 'shoots#gallery', via: 'get'
 

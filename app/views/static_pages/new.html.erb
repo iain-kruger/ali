@@ -1,0 +1,38 @@
+<% provide(:title, 'Contact') %>
+<h1>Contact</h1>
+
+<div class="container">
+  <div class="form-inner">
+    <div class="form-group">
+    <%= form_for @info,:html => {:multipart => true}, url: static_pages_path do |f| %>
+<p>
+  <%= f.label :shoot_type  %> 
+  <%= f.select(:shoot_type, options_for_select([['Event', 'events'], ['Children', 'children'], ['Maternity', 'maternity' ], ['Family' , 'family'], ['Couples', 'couples'], ["New Born", "newborn"]]), {}, {class: "form-control"}) %>
+  <p>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :Message %>
+      <%= f.text_area :msg, class: "form-control"%>
+</p>
+<p> 
+
+</p>
+<p class="center"> If you are able please fill in the following</p>
+<p>
+      <%= f.label :date_of_event %>
+      <%= f.text_field :date_of_event, :placeholder => "DD/MM/YY" %>
+
+      <%= f.label :event_times %>
+      <%= f.text_field :event_times %>
+</p>
+
+    <p>  <%= f.submit "Submit Message", class: "btn btn-large btn-primary" %></p>
+    <% end %>
+    </div>
+  </div>
+</div>
+

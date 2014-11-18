@@ -1,25 +1,25 @@
 <% provide(:title, 'New Shoot') %>
 <h1>New Shoot</h1>
 
-<div class="row">
-  <div class="col-xs-12 col-md-6">
+<div class="form-inner">
+  
     <%= form_for @shoot, :html => {:multipart => true} do |f| %>
     <%= render 'shared/error_messages' %>
 <p>
-      <%= f.label :catagory %>
-      <%= f.select(:catagory, options_for_select([['Event', 'events'], ['Children', 'children'], ['Maternity', 'maternity' ], ['Family' , 'family'], ['Couples', 'couples'], ["New Born", "newborn"]])) %>
+      <%= f.label "Category" %>
+      <%= f.select(:catagory, options_for_select([['Event', 'events'], ['Children', 'children'], ['Maternity', 'maternity' ], ['Family' , 'family'], ['Couples', 'couples'], ["New Born", "newborn"]]), {}, {class: "form-control"}) %>
 
       <%= f.label :name %>
       <%= f.text_field :name %>
 
-      <%= f.label :discription %>
-      <%= f.text_field :discription %>
+      <%= f.label "description" %>
+      <%= f.text_area :discription %>
       </p>
 <p>
-      <%= f.label :thumbnail %>
-      <%= f.file_field :thumbnail %>
+      <%= f.label "Add the image to use as a thumbnail for this shoot.", class: "center" %>
+      <%= f.file_field :thumbnail, class: "form-control" %>
 </p>  
     <p>  <%= f.submit "Submit New Shoot", class: "btn btn-large btn-primary" %></p>
     <% end %>
-  </div>
+  
 </div>
