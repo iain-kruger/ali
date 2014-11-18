@@ -3,15 +3,16 @@
 <div class="container">
 
 	<div class="shoot-view">
-    <p><h1><%= @shoot.name %></h1></p>
+    <p><h1><%= "#{@shoot.catagory}: #{@shoot.name}" %></h1></p>
+    
       <div class="shoot-thumbnail">
         <%= image_tag @shoot.thumbnail_url.to_s %>
       </div>
         <p class="center"><%= @shoot.discription %></p>
       <div class="shoot-controls">
              
-              <%= link_to "edit", edit_shoot_path(@shoot), class: "btn btn-large btn-primary" %>
-              <%= link_to "remove", @shoot, :confirm => 'Are you sure you want to delete this shoot? All its photos will be deleted with it!', class: "btn btn-large btn-danger" , :method => :delete %>
+              <%= link_to "Edit", edit_shoot_path(@shoot), class: "btn btn-large btn-primary" %>
+              <%= link_to "Remove", @shoot, :confirm => 'Are you sure you want to delete this shoot? All its photos will be deleted with it!', class: "btn btn-large btn-danger" , :method => :delete %>
               <%= link_to "Back", shoots_path, class: "btn btn-large btn-primary" %>
         
       </div>
@@ -29,7 +30,7 @@
             <div class="index-photo col-md-6">
               <%= image_tag photo.photo_url.to_s %>
                 <div class="index-control">
-                  <%= link_to "delete", shoot_photo_path(shoot_id: @shoot.id, id:photo.id), class: "btn btn-danger", :method => :delete %>
+                  <%= link_to "Delete", shoot_photo_path(shoot_id: @shoot.id, id:photo.id), class: "btn btn-danger", :method => :delete %>
                 </div>
             </div>
           <% end %>
