@@ -1,4 +1,8 @@
 <div Class="container">
+  <% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: "alert alert-success center" %>
+    <% end -%>
+
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
