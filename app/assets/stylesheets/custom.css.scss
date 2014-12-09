@@ -368,3 +368,26 @@ input {
   background-color: #a8dbc8;
   font-family: 'CaviarDreams';
 }
+
+  #ali-nav {
+    display: table;
+    height: 87px;
+    width: 100%;
+}
+
+#ali-nav li {
+    display: table-cell;
+    height: 87px;
+    width: 16.666666667%;
+    line-height: 87px;
+    text-align: center;
+    background: #ddd;
+    border-right: 1px solid #fff;
+}
+
+@media (max-width: 767px) {
+    #ali-nav li {
+        display: block;
+        width: 100%;
+    }
+}
