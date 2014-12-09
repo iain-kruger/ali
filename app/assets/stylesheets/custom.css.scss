@@ -6,9 +6,17 @@
     font-family: 'CaviarDreams'; 
     src: url('/assets/fonts/caviardreams-webfont.ttf');
 }*/
-@font-face {
+/*@font-face {
   font-family: 'CaviarDreams';
   src: url('/assets/caviardreams-webfont.eot') format('eot'), url('/assets/caviardreams-webfont.woff') format('woff'), url('/assets/caviardreams-webfont.ttf') format('truetype'), url('/assets/caviardreams-webfont.svg#caviar_dreamsregular') format('svg');
+*/
+@font-face {
+    font-family: 'CaviarDreams';
+    src: url('/assets/caviardreams-webfont.eot');
+    src: url('/assets/caviardreams-webfont.eot') format('eot'),
+         url('/assets/caviardreams-webfont.woff') format('woff'),
+         url('/assets/caviardreams-webfont.ttf') format('truetype'),
+         url('/assets/caviardreams-webfont.svg#caviar_dreamsregular') format('svg');
 }
 
 html {
