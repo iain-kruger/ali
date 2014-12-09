@@ -7,7 +7,7 @@ class StaticPagesController < ApplicationController
   	@info = Contact.new(static_params) 
     @info.save
     ContactMailer.contact_email(@info).deliver
-    flash[:notice] = "Your email has been sent to Ali."
+    flash[:notice] = "#{@info.name}, an email has been sent to me. I will be in contact with you soon. "
     redirect_to :action => 'new'
   end
 
