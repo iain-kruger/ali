@@ -9,8 +9,9 @@ Ali::Application.routes.draw do
   match '/gallery', to: 'static_pages#gallery',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#new', via: 'get'
- 
-match '/shoots/go/:catagory', to: 'shoots#gallery', via: 'get'
+  match '/admin', to: 'shoots#index', via: 'get'
+  
+  match '/shoots/go/:catagory', to: 'shoots#gallery', via: 'get'
 
 
 
