@@ -7,7 +7,7 @@
     <%= render 'shared/error_messages' %>
 <p>
       <%= f.label "Category" %>
-      <%= f.select(:catagory, options_for_select([['Event', 'events'], ['Children', 'children'], ['Maternity', 'maternity' ], ['Family' , 'family'], ['Couples', 'couples'], ["New Born", "newborn"]]), {}, {class: "form-control"}) %>
+      <%= f.select(:catagory, options_for_select([['Event', 'events'], ['Children', 'children'], ['Maternity', 'maternity' ], ['Family' , 'family'], ['Couples', 'couples'], ["Newborn", "newborn"]]), {}, {class: "form-control"}) %>
 
       <%= f.label :name %>
       <%= f.text_field :name %>
