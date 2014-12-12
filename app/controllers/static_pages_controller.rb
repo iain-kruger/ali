@@ -23,6 +23,9 @@ class StaticPagesController < ApplicationController
   def gallery
   end
 
+  def packages
+  end
+
 private
 
     def static_params

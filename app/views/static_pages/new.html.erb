@@ -1,10 +1,17 @@
 <% provide(:title, 'Contact') %>
 <h1>Contact</h1>
+
  <% flash.each do |name, msg| -%>
       <%= content_tag :div, msg, class: "alert alert-success center" %>
     <% end -%>
 <div class="container">
   <div class="form-inner">
+    <div class="box">
+      <p>Phone: 084 496 7703</p>
+      <p>Email: <a href="mailto:ali.bodill@gmail.com">ali.bodill@gmail.com</a></p>
+    </div>
+    <p> Or you can fill in the email form below.</p>
+    <p></p>
     <div class="form-group">
     <%= form_for @info,:html => {:multipart => true}, url: static_pages_path do |f| %>
 <p>
@@ -29,12 +36,13 @@
       <%= f.text_field :date_of_event, :placeholder => "DD/MM/YY" %>
 
       <%= f.label :event_times %>
-      <%= f.text_field :event_times %>
+      <%= f.text_field :event_times, :placeholder => "Start - End" %>
 </p>
 
     <p>  <%= f.submit "Submit Message", class: "btn btn-large btn-primary" %></p>
     <% end %>
     </div>
+    
   </div>
 </div>
 

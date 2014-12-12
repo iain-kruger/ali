@@ -48,9 +48,6 @@ end
   def gallery
     @catagory= (params[:catagory])
     @shoots = Shoot.where(catagory: @catagory) 
-    if @catagory == "newborn"
-      @catagory = "New Born"
-    end
   end
 
 
