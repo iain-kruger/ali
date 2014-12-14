@@ -3,17 +3,24 @@
 <%= link_to "Add A Shoot", new_shoot_path , class: "btn btn-large btn-primary" %>
 </div>
 
+
 <div class="container">
-<div class="row">
+
+
   <% @shoots.each do |shoot| %>
-   <div class="col-xs-12 col-md-4">
-  	<span class="center gallery"><h2><%= shoot.name%></h2></span>
+   <div class="col-xs-6 col-md-4">
+  	<span class="center gallery"><h2><%= shoot.name %></h2></span>
   	<span class="center gallery"><h2><%= shoot.catagory%></h2></span>
-    <a href=<%= shoot_path(shoot.id) %> class="thumbnail">
-      <%= image_tag shoot.thumbnail_url.to_s %>
-    </a>
+      <div class="ali-thumbnail">
+      		<div class="thumbnail-top-layer ali-glow">
+      		<%= link_to( image_tag("Wreath.png",), image_path( "/shoots/#{shoot.id}") )%>
+      		</div>
+      		<div class="thumbnail-back-layer">
+			<%= image_tag shoot.thumbnail_url.to_s %>
+			</div>
+		</div>
 </div>
   <% end %>
-</ul>
-</div>
 
+
+</div>

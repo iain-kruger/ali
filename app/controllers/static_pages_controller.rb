@@ -11,6 +11,7 @@ class StaticPagesController < ApplicationController
   end
 
   def home
+    @shoots=Shoot.last(3)
   end
 
   def about
