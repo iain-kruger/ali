@@ -79,7 +79,7 @@
           <%= link_to( image_tag("Wreath.png",), image_path( "/shoots/#{shoot.id}/#{shoot.name}/photos/gallery ") )%>
           </div>
           <div class="thumbnail-back-layer">
-      
+        <%= image_tag shoot.thumbnail_url.to_s %>
       </div>
     </div>
 </div>
