@@ -1,8 +1,9 @@
 <h1><%= @shoot.name %></h1>
 <h2><%= @shoot.discription %></h2>
-<div class="photo">
-  <% @photos.each do |photo| %>
+<div class="image-bar-outer">
+	<% @photos.each do |photo| %>
+	<div class="image-bar-item">
  <%= image_tag photo.photo_url.to_s %>
-
-<% end %>
 </div>
+<% end %>
+  </div> 
