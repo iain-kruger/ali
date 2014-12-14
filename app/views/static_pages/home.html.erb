@@ -62,8 +62,8 @@
     <ul>
         <li class="social-first"><%= link_to image_tag("social/silver round social media icon facebook.png", alt: "Facebook"), 'https://www.facebook.com/pages/Ali-Bodill-Photography/611295985652536' %></li>
         <li><%= link_to image_tag("social/twitter 2 silver round social media icon .png", alt: "Twitter"), '/' %></li>
-        <li><a href='javascript:void((function()%7Bvar%20e=document.createElement(&apos;script&apos;);e.setAttribute(&apos;type&apos;,&apos;text/javascript&apos;);e.setAttribute(&apos;charset&apos;,&apos;UTF-8&apos;);e.setAttribute(&apos;src&apos;,&apos;http://assets.pinterest.com/js/pinmarklet.js?r=&apos;+Math.random()*99999999);document.body.appendChild(e)%7D)());'><img src='http://localhost:3000/assets/social/pinterest%20silver%20round%20social%20media%20icon%20.png'/></a></li>
-        <li><%= link_to image_tag("social/pinterest.png", alt: "Instagram"), '/' %></li>
+        <li><a href='javascript:void((function()%7Bvar%20e=document.createElement(&apos;script&apos;);e.setAttribute(&apos;type&apos;,&apos;text/javascript&apos;);e.setAttribute(&apos;charset&apos;,&apos;UTF-8&apos;);e.setAttribute(&apos;src&apos;,&apos;http://assets.pinterest.com/js/pinmarklet.js?r=&apos;+Math.random()*99999999);document.body.appendChild(e)%7D)());'><%= image_tag("social/pinterest silver round social media icon .png", alt: "Instagram") %></a></li>
+        <li><%= link_to image_tag("social/pinterest.png", alt: "Instagram")%></li>
       </ul>
       </div>
    </div>
@@ -79,7 +79,7 @@
           <%= link_to( image_tag("Wreath.png",), image_path( "/shoots/#{shoot.id}/#{shoot.name}/photos/gallery ") )%>
           </div>
           <div class="thumbnail-back-layer">
-      <%= image_tag shoot.thumbnail_url.to_s %>
+      
       </div>
     </div>
 </div>
