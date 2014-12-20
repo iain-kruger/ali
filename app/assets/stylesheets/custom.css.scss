@@ -102,6 +102,9 @@ p {
 display: table;
 width:100%;
 }
+.navbar-nav a:active{
+font-weight: bold;
+}
 .navbar-nav li{
     display: table-cell;
     width: 20%;
