@@ -29,7 +29,7 @@ class BlogsController < ApplicationController
 
     respond_to do |format|
       if @blog.save
-        format.html { redirect_to @blog, notice: 'News post was successfully created.' }
+        format.html { redirect_to blogs_path, notice: 'News post was successfully created.' }
         format.json { render action: 'show', status: :created, location: @blog }
       else
         format.html { render action: 'new' }
@@ -43,7 +43,7 @@ class BlogsController < ApplicationController
   def update
     respond_to do |format|
       if @blog.update(blog_params)
-        format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
+        format.html { redirect_to blogs_path, notice: 'Blog was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
