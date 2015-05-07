@@ -1,0 +1,47 @@
+<h1>Listing blogs</h1>
+
+<div class="post-outer-pig">
+  
+  <p><%= paginate @blogs %></p>
+  
+  <p><%= link_to 'New Post', new_blog_path, class: "btn btn-large btn-primary" %></p>
+
+
+</div>
+
+<p id="notice"><%= notice %></p>
+
+  <div class="image-bar-outer">
+      <% @blogs.reverse.each do |post| %>
+    <div class="post-outer">
+      <div class="post-title">
+        <h1><%= post.title %></h1>
+      </div>
+      
+      <div class="post-body">
+        <h2><%= post.body %></h2>
+      </div>
+
+      <div class="post-image">
+        <%= image_tag post.image_url.to_s %>
+      </div>    
+      
+      <div class="center">
+        <%= link_to 'Edit', edit_blog_path(post), class: "btn btn-large btn-primary" %>
+        <%= link_to 'Destroy', post, class: "btn btn-large btn-danger",  method: :delete, data: { confirm: 'Are you sure?' } %>  
+
+      </div>
+  </div>
+<% end %>
+  </div> 
+<div class="post-outer-pig">
+  
+  <p><%= paginate @blogs %></p>
+  
+  <p><%= link_to 'New Post', new_blog_path, class: "btn btn-large btn-primary" %></p>
+
+
+</div>
+
+
+

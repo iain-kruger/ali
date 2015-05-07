@@ -1,4 +1,7 @@
 Ali::Application.routes.draw do
+  match '/news', to: 'blogs#show',    via: 'get'
+  resources :blogs
+
    root  'static_pages#home'
    match '/shoots/:shoot_id/:shoot_name/photos/gallery', to: 'photos#show', via: 'get'
    resources :static_pages
@@ -12,6 +15,7 @@ Ali::Application.routes.draw do
   match '/admin', to: 'shoots#index', via: 'get'
    match '/packages', to: 'static_pages#packages', via: 'get'
   match '/shoots/go/:catagory', to: 'shoots#gallery', via: 'get'
+  
 
 
 

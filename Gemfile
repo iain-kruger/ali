@@ -8,6 +8,7 @@ gem 'sprockets', '2.11.0'
 gem 'annotate'
 gem 'carrierwave'
 gem 'carrierwave-dropbox'
+gem 'kaminari'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
